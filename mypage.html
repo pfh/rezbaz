@@ -1,0 +1,25 @@
+<!doctype html>
+
+<title>My page</title>
+
+<p id="mymessage">Hello.</p>
+
+<button id="mybutton">Button</button>
+
+<svg width="600" height="600">
+    <circle cx="50" cy="50" r="10" />
+</svg>
+
+<script src="d3.js"> </script>
+
+<script>
+"use strict";
+
+let message = d3.select("#mymessage");
+let button = d3.select("#mybutton");
+
+button.on("click", event => {
+    message.text("Button pressed.");
+});
+
+</script>
